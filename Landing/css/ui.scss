@@ -1,0 +1,333 @@
+/* ICONs */
+
+.i_correct{
+color: $secondary_color;
+}
+
+
+/*Active account*/
+
+#main_activar{
+width: 100%;
+min-height: 100%;
+float: left;
+background: #E1E7EA;
+}
+
+#box_active_account{
+width: 100%;
+height: auto;
+float: left;
+color: #777777;
+padding: 0 3em 3em 3em;
+margin: 6em 0;
+font-size: 1em;
+line-height: 1.6em;
+font-family: $font_family_title;
+background: #FFFFFF;
+text-align: center;
+@include border-radius($radius);
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+
+	h3{
+	margin: 1.5em 0 0 0;
+	color: #555555;
+	font-family: $font_family;
+	font-size: 1.5em;
+	letter-spacing: 0.02em;
+	}
+
+	p{
+	margin: 1.5em 0;
+	}
+
+	img.icono_activar{
+	width: 96px;
+	height: 96px;
+	margin: -48px auto 0 auto;
+	display: block;
+	background: #CCFEFE;
+	@include border-radius(100%);
+	border: 5px solid #FFFFFF;
+	}
+
+}
+
+
+/*ACTIVATED ACCOUNT*/
+
+#main_activado{
+width: 100%;
+min-height: 100%;
+float: left;
+background: url(../img/bg/blurred.jpg) no-repeat;
+background-size: cover;
+}
+
+.ui_box{
+width: 100%;
+height: auto;
+float: left;
+font-family: $font_family_title;
+@include border-radius($radius);
+	
+	.ui_section_box{
+	width: 100%;
+	height: auto;
+	float: left;
+	}
+
+}
+
+.form_box textarea{
+resize: none;
+width: 100%;
+min-height: 120px;
+color: #333333;
+font-family: $font_family_title;
+font-size: 0.9em;
+padding-bottom: 1em;
+background: transparent;
+letter-spacing: 0.02em;
+border: 1px solid transparent;
+@include border-radius($radius);
+}
+
+.box_steps{
+background: #FFFFFF;
+color: #555555;
+font-size: 0.9em;
+line-height: 1.4em;
+@include border-radius($radius);
+
+	img.icon_box{
+	width: 96px;
+	height: 96px;
+	margin: 1em auto;
+	display: block;
+	@include border-radius(100%);
+	}
+
+	.progress_box{
+	height: 12px;
+	margin: 1em;
+	}
+
+	.group_box_header{
+	background: transparent;
+	padding: 0.5em 1em;
+	@include border-radius-top($radius);
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+
+	.group_box_header.dark{
+	background: rgba(0, 0, 0, 0.8);
+	}
+
+	.group_box_body{
+	background: transparent;
+	padding: 1em 1em 0 1em
+	}
+
+	.group_box_footer{
+	background: transparent;
+	padding: 1em;
+	@include border-radius-bottom($radius);
+
+		span{
+		display: none;
+		float: left;
+		font-size: 0.9em;
+		padding: 0.4em;
+		font-family: $font_family_title;
+		color: $text_color;
+		}
+	
+		.button{
+		float: right;
+		}
+
+	}
+
+	.group_box_footer.margin_box_footer{
+	margin-top: 1em;
+	}
+
+}
+
+.box_activated_account{
+margin: 3em 0;
+box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.box_steps.light{
+box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.box_steps_no_padding .group_box_header,
+.box_steps_no_padding .group_box_body,
+.box_steps_no_padding .group_box_footer{
+padding-left: 0;
+padding-right: 0;
+}
+
+.box_steps.plane-styled{
+/*border-top: 2px dashed $secondary_color;*/
+}
+
+.box_steps.dark{
+color: #EEEEEE;
+background: rgba(0, 0, 0, 0.8);
+}
+
+
+//Hide with CSS and show with JS
+.box_section{
+display: none;
+}
+
+.span_box{ //Information
+width: auto;
+}
+
+.error_box{ //Show the throw error
+width: 100%;
+font-style: italic;
+}
+
+/*DRAG AND DROP*/
+
+$color_drag_and_drop: #E3EAF3;
+
+
+.profile-avatar-wrap {
+width: 100%;
+float: left;
+position: relative;
+pointer-events: none;
+}
+
+.profile-avatar-wrap:after {
+/* Drag Prevention */
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.profile-avatar-wrap img {
+width: 100%;
+display: block;
+}
+
+.drag_and_drop{
+width: 100%;
+height: 100%;
+float: left;
+padding: 3em 2em;
+font-size: 1em;
+background: $color_drag_and_drop;
+border: 1px dashed darken($color_drag_and_drop, 25%);
+
+	.text_drag_and_drop{
+	width: 300px;
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	}
+
+	i{
+	font-size: 2.6em;
+	color: darken($color_drag_and_drop, 50%);
+	display: block;
+	position: relative;
+	}
+
+	p{
+	margin: 1em 0 0 0;
+	color: $text_color;
+	font-family: $font_family_title;
+	}
+
+	span{
+	display: block;
+	cursor: pointer;
+	color: darken($color_drag_and_drop, 50%);
+	font-size: 0.95em;
+	text-align: center;
+	font-family: $font_family_bold;
+	}
+
+	span:hover{
+	text-decoration: underline;
+	}
+
+}
+
+.drag_and_drop.droppable{
+background: darken($color_drag_and_drop, 10%);
+border: 1px dashed darken($color_drag_and_drop, 35%);
+}
+
+
+/* CONTENT BOX: BOOKS, AUTHORS*/
+
+.group_content_box{
+width: 100%;
+height: 240px;
+min-height: 240px;
+float: left;
+padding-right: 10px;
+}
+
+.content_box{
+@include number-elements(5, $margin_min);
+position: relative;
+cursor: pointer;
+border: 4px solid $primary_color;
+@include border-radius($radius);
+
+	img{
+	width: 100%;
+	height: 100%;
+	float: left;
+	}
+
+	span{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: $secondary_color;
+	}
+
+}
+
+.content_box.ccb_active{
+border: 4px solid $secondary_color;
+}
+
+/* MEDIA QUERYES */
+
+@media screen and (max-width:720px) {
+
+  .content_box{
+  @include number-elements(4, $margin_min);
+  }
+
+}
+
+@media screen and (max-width:600px) {
+
+
+  .content_box{
+  @include number-elements(3, $margin_min);
+  }
+
+  .span_box{
+  width: 100%;
+  }
+
+}

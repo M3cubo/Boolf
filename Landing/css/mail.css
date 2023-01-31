@@ -1,0 +1,187 @@
+/* ------------------------------------- 
+		GLOBAL 
+------------------------------------- */
+* { 
+	margin:0;
+	padding:0;
+}
+* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+img { 
+	max-width: 100%; 
+}
+.collapse {
+	margin:0;
+	padding:0;
+}
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+}
+
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+a { color: #2BA6CB;}
+
+table.social {
+	margin: 20px 0;
+	padding: 14px 20px!important;
+	background-color: #ebebeb;
+	
+}
+
+table.social tbody, table.social tr{
+	width: 100%;
+	float: left;
+}
+
+table.social tr td{
+	width: 50%;
+	float: left;
+}
+
+table.social tr td.td_right{
+	float: right;
+}
+
+.social .soc-btn {
+	min-width: 140px;
+	float: right;
+	padding: 3px 7px;
+	font-size:16px;
+	margin-bottom:10px;
+	text-decoration:none;
+	color: #FFF;
+	display:inline-block;
+	text-align:center;
+}
+a.fb { background-color: #3B5998!important; }
+a.tw { background-color: #1daced!important; }
+a.gp { background-color: #DB4A39!important; }
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+table.head-wrap { width: 100%;}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+table.footer-wrap { width: 100%;	clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+	
+}
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+h1,h2,h3,h4,h5,h6 {
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
+
+h1 { font-weight:200; font-size: 44px;}
+h2 { font-weight:200; font-size: 37px;}
+h3 {
+font-weight:500;
+font-size: 26px;
+margin: 20px 0;
+}
+
+.collapse { margin:0!important;}
+
+p, ul { 
+	margin-bottom: 10px; 
+	font-weight: normal; 
+	font-size:14px; 
+	line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+ul li {
+	margin-left:5px;
+	list-style-position: inside;
+}
+
+#icon_send_email{
+width: 96px;
+height: 96px;
+margin: -48px auto 0 auto;
+display: block;
+background: #CCFEFE;
+border-radius: 100%;
+border: 5px solid #FFFFFF;
+}
+
+.button_send_email{
+width: 100%;
+float: left;
+display: block;
+padding: 12px 18px;
+font-size: 16px;
+letter-spacing: 0.5px;
+margin: 20px 0;
+cursor: pointer;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
+background: #FFFFFF;
+background: #68CA9A;
+border: 1px solid transparent;
+}
+
+.button_send_email:hover{
+background: #8ED7B3;
+}
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+	display:block!important;
+	max-width:600px!important;
+	margin:100px auto 20px auto!important; /* makes it centered */
+	clear:both!important;
+	border-radius: 3px!important;
+}
+
+
+table.footer-wrap .container {
+	margin:0px auto!important; /* makes it centered */
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+	padding:15px;
+	max-width:600px;
+	margin:0 auto;
+	display:block; 
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }

@@ -1,0 +1,550 @@
+/* CSS Document */
+
+$color_button: $secondary_color;
+$color_facebook: #3b5998;
+$color_twitter: #4099FF;
+
+.button{
+min-width: 160px;
+max-width: 100%;
+float: left;
+display: block;
+padding: 0.4em 0.8em;
+font-size: 0.85em;
+letter-spacing: 0.05em;
+cursor: pointer;
+text-align: center;
+text-transform: uppercase;
+font-family: $font_family;
+background: #FFFFFF;
+color: #777777;
+border: 1px solid #CCCCCC;
+@include border-radius(20px);
+}
+
+.button:hover{
+border: 1px solid $color_button;
+}
+
+/*OTHER*/
+
+.margin-vertical{margin-top: 1em !important;}
+.margin-horizontal{margin-right: 1em;}
+.button.middle{width: 180px; min-width: 100px; max-width: 100%; float: none; margin: 0 auto; display: block;}
+.button.center{min-width: 0; width: 100%; display: block;}
+.button.min {min-width: auto;float: none;display: inline;padding: 0.4em 1.2em;}
+.button.max {padding: 0.8em 1.6em;font-size: 1em;@include border-radius(40px);}
+
+.button.submit{padding: 0.4em 1em;margin-right: 1em;}
+.button.top {margin-top: 0;margin-bottom: 1em;}
+.button.minimal {width: 100%;font-size: 0.9em;@include border-radius(0);}
+.button.mini {min-width: auto;float: left;font-size: 0.8em;padding: 0.6em 1em;border: none;}
+.button.mini i {font-size: 1.2em;}
+
+.button.disabled{background: #BBBBBB !important;}
+.button.transparente{color: #FFFFFF; background: rgba(0, 0, 0, 0.1);}
+
+.button.skip{
+min-width: 120px;
+background: transparent;
+color: #8F94A9;
+text-transform: none;
+border: none;
+}
+
+.button.skip:hover{
+color: $color_darken;
+}
+
+.button.back{
+float: left !important;
+min-width: 120px;
+background: transparent;
+color: #8F94A9;
+text-transform: none;
+border: none;
+}
+
+.button.back:hover{
+color: $color_darken;
+}
+
+/*Awesome buttons*/
+
+.button.awesome{
+background: darken($secondary_color, 10%);
+color: #FFFFFF;
+border: 1px solid transparent;
+}
+
+.button.awesome:hover{
+background: $secondary_color;
+}
+
+.button.transparent{
+background: rgba(0, 0, 0, 0.2);
+color: #AAAAAA;
+border: 2px solid #FFFFFF;
+}
+
+.button.transparent:hover{
+background: rgba(255, 255, 255, 0.2);
+color: #DDDDDD;
+}
+
+/*Social*/
+.social{float: none;display: inline-block;margin: 1em;padding: 0.8em 3em !important;border: none;}
+.social:hover{border: none;}
+
+.facebook{background: $color_facebook;color: #FFFFFF;}
+.facebook:hover{background: lighten($color_facebook, 5%);}
+
+.twitter{background: $color_twitter;color: #FFFFFF;}
+.twitter:hover{background: lighten($color_twitter, 5%);}
+
+/*Following*/
+.button.follow{border: 1px solid #CCCCCC;}
+.button.follow:hover{border: 1px solid $color_button;}
+.button.unfollow{border: 1px solid $color_button;}
+.button.unfollow:hover{border: 1px solid #CCCCCC;}
+
+
+.submit_bottom{
+width: 100%;
+float: left;
+margin-top: 1em;
+padding-top: 1em;
+border-top: 1px solid #CCCCCC;
+}
+
+/* Parsley */
+
+.parsley-errors-list{
+width: 100%;
+float: left;
+margin-bottom: 5px;
+}
+
+.parsley-errors-list li{
+width: 100%;
+float: left;
+font-size: 0.8em;
+font-family: $font_family;
+font-style: italic;
+margin-left: 0.5em;
+padding-left: 0.5em;
+border-left: 2px solid $secondary_color;
+}
+
+.form_shadow .parsley-errors-list li{
+color: #CCCCCC;
+}
+
+.info_form{
+width: auto;
+float: left;
+display: block;
+padding: 0.5em;
+margin: 0.5em 0 1em 0;
+color: #777777;
+font-size: 0.9em;
+font-family: $font_family_title;
+}
+
+.info_form.min{
+width: 100%;
+margin: 1em 0 0 0;
+padding: 1em 0;
+border-top: 1px dashed #777777;
+font-size: 0.8em;
+font-family: $font_family;
+}
+
+/* Title`s */
+
+.title_form_landing{
+margin: 0 0 1em 0;
+color: #FFFFFF;
+font-family: $font_family;
+font-size: 1.7em;
+letter-spacing: 0.02em;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.title_form_admin{
+width: 100%;
+float: left;
+font-family: $font_family_bold;
+font-size: 1em;
+margin: 1em 0;
+padding: 0.5em 0;
+color: $text_color;
+border-bottom: 1px dashed #999999;
+}
+
+/* FORM */
+
+.form{
+font-size: 18px;
+}
+
+.field {
+width: 100%;
+float: left;
+display: block;
+margin: 0;
+}
+
+label {
+min-width: 200px;
+float: left;
+display: block;
+margin: 0.5em 0;
+font-size: 0.8em;
+line-height: 40px;
+}
+
+.uppercase label{
+text-transform: uppercase;
+}
+
+span.label {
+width: 100%;
+float: left;
+display: block;
+font-family: $font_family_title;
+text-transform: uppercase;
+color: #555555;
+font-size: 0.8em; 
+}
+
+/*INPUT´s*/
+
+.form input {
+width: auto;
+float: left;
+font-family: $font_family;
+font-size: 16px;
+padding: 0.5em 1em;
+margin: 0.4em 0;
+font-weight: 400;
+border: 1px solid #BBBBBB;
+background: #FFFFFF;
+@include border-radius($radius);
+}
+
+.form input:focus {
+border: 1px solid $secondary_color;
+}
+
+.form input ~ i{
+position: absolute;
+float: left;
+margin: 10px 0px 0px -35px;
+color: $text_color;
+font-size: 1.2em;
+-webkit-transition: all 0.1s ease-out;
+-moz-transition: all 0.1s ease-out;
+-ms-transition: all 0.1s ease-out;
+-o-transition: all 0.1s ease-out;
+transition: all 0.1s ease-out;
+}
+
+.form input:focus ~ i{
+color: #52cfeb;
+}
+
+/*Button form*/
+
+.button_landing{
+width: 100% !important;
+float: left;
+cursor: pointer;
+text-align: center;
+background-color: darken($secondary_color, 10%) !important;
+color: #FFFFFF !important;
+text-shadow: none;
+font-size: 1em !important;
+padding: 0.6em 1em;
+margin-top: 1em;
+border-top: 1px solid $secondary_color !important;
+border-bottom: 1px solid $secondary_color !important;
+box-shadow: 0 0 2px rgba(0, 0, 0, 0.6) !important;
+}
+
+.button_landing:hover{
+background-color: #8ED7B3 !important;
+}
+
+.button_landing.center{
+max-width: 200px;
+margin: 0 auto;
+display: block;
+float: none;
+}
+
+.form-light .button_landing{
+box-shadow: none !important;
+border: 1px solid $secondary_color !important;
+}
+
+/* Type input */
+
+.form input.icon_right{padding: 10px 45px 10px 10px;}
+.form input.large{width: 100%;max-width: 100%;}
+.form input.min{width: 120px !important;}
+.form button:focus{outline: none;}
+
+/*TWO COLUMN*/
+
+.form-two-column input{
+width: 260px;
+max-width: 100%;
+float: right;
+}
+
+@media screen and (max-width:600px) {
+
+    .form-two-column input{
+    width: 100%;
+    float: left;
+    }
+
+}
+
+
+/*OTHER INPUT´s*/
+
+/* Select */
+
+.form select{
+width: auto;
+float: left;
+font-family: $font_family;
+color: #555;
+font-size: 16px;
+padding: 0.5em;
+margin: 0.4em 0;
+background: #F9F9F9;
+@include border-radius($radius);
+border: 1px solid #AAA;
+}
+
+/* Textarea */
+
+.form textarea{
+resize: none;
+width: 100%;
+min-height: 240px;
+font-family: $font_family_title;
+font-size: 0.85em;
+font-weight: 400;
+padding: 0.8em;
+margin: 0.5em 0;
+background: #F9F9F9;
+border: 1px solid #CCCCCC;
+@include border-radius($radius);
+}
+
+.form textarea:focus{
+border: 1px solid $secondary_color;
+background: #FCFCFC;
+}
+
+
+.form textarea.min{min-height: 100px;}
+.form textarea.medium{min-height: 160px;}
+.form textarea.large{min-height: 340px;}
+
+
+/*FORM LIGHT*/
+
+.form-light{
+color: #777777;
+font-family: $font_family_title;
+}
+
+.form-light input{
+background: #FFFFFF;
+color: #777777;
+border: 1px solid #BBB;
+}
+
+.form-light input:focus{
+background: #FCFCFC;
+color: #555555;
+}
+
+/*FORM SHADOW*/
+
+.form-shadow{
+color: #DDDDDD;
+}
+
+.form-shadow input{
+background: rgba(0, 0, 0, 0.2);
+color: #DDDDDD;
+border: 1px solid rgba(255, 255, 255, 0.15);
+box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+.form-shadow input:focus{
+background: rgba(0, 0, 0, 0.1);
+color: #FFFFFF;
+}
+
+.form-shadow textarea{
+background: rgba(0, 0, 0, 0.2);
+color: #DDDDDD;
+border: 1px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+.form-shadow textarea:focus{
+background: rgba(0, 0, 0, 0.1);
+color: #FFFFFF;
+}
+
+.label_checkbox{
+width: 100%;
+float: left;
+display: block;
+margin: 0;
+font-size: 0.9em;
+    
+    input{
+    margin-right: 1em !important;
+    }
+
+}
+
+.form_shadow .label_checkbox{
+color: #CCCCCC;
+}
+
+/* File */
+
+.file-wrapper {
+width: 100%;
+cursor: pointer;
+display: inline-block;
+overflow: hidden;
+position: relative;
+margin-top: 1em;
+}
+
+.file-wrapper input {
+cursor: pointer;
+height: 100%;
+position: absolute;
+right: 0;
+top: 0;
+}
+
+.file-wrapper input {
+filter: alpha(opacity=50);
+-moz-opacity: 0.5;
+opacity: 0.5;
+}
+
+.file-wrapper input {
+filter: alpha(opacity=1);
+-moz-opacity: 0.01;
+opacity: 0.01;
+}
+
+.file-wrapper:hover .button {
+border: 1px solid $color_button;
+}
+
+.file-wrapper .button {
+line-height: 1.2em;
+margin: 0;
+overflow: hidden;
+}
+
+//.file-wrapper input {font-size: 100px;}
+
+
+/* Add more inputs */
+
+.wrapper_add_input{
+width: 100%;
+float: left;
+margin: 0.5em 0;
+}
+
+.add_field_button{
+margin-bottom: 1em;
+}
+
+.remove_field{
+float: left;
+padding: 0.5em;
+color: darken($secondary_color, 10%);
+}
+
+.remove_field:hover{
+color: $secondary_color;
+}
+
+/* iCheck
+----------------------------------- */
+.icheckbox_polaris,
+.iradio_polaris {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5em 0 0;
+    background: url(../img/img/ui/polaris.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_polaris {
+    background-position: 0 0;
+}
+    .icheckbox_polaris.hover {
+        background-position: -31px 0;
+    }
+    .icheckbox_polaris.checked {
+        background-position: -62px 0;
+    }
+    .icheckbox_polaris.disabled {
+        background-position: -93px 0;
+        cursor: default;
+    }
+    .icheckbox_polaris.checked.disabled {
+        background-position: -124px 0;
+    }
+
+.iradio_polaris {
+    background-position: -155px 0;
+}
+    .iradio_polaris.hover {
+        background-position: -186px 0;
+    }
+    .iradio_polaris.checked {
+        background-position: -217px 0;
+    }
+    .iradio_polaris.disabled {
+        background-position: -248px 0;
+        cursor: default;
+    }
+    .iradio_polaris.checked.disabled {
+        background-position: -279px 0;
+    }
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_polaris,
+    .iradio_polaris {
+        background-image: url(../img/img/ui/polaris@2x.png);
+        -webkit-background-size: 310px 31px;
+        background-size: 310px 31px;
+    }
+}

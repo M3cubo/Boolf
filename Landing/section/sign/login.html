@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+
+<title>{{trans('login.title')}}</title>
+
+@include(Config::get('rv.header'))
+{{ Html::script('js/icheck.js', array('defer' => 'defer')) }}
+</head>
+<body>
+
+<div id="main_login">
+
+<img src="img/bg/login.jpg" id="bg" class="bg_bottom" alt="Fondo">
+
+@include(Config::get('rv.nav'))
+
+<div class="container">
+
+<div id="content_form_landing">
+
+    <div class="form_center">
+        
+        <h3 class="title_form_landing">{{trans('login.titulo')}}</h3>
+        
+            @foreach($errors->all() as $message)
+
+            <li>{{ $message }}</li>
+
+            @endforeach
+            {{Session::get('msg')}}
+
+        <div id="form_landing">
+
+        <form id="yourForm" class="form form-shadow" method="post" action="{{Request::root()}}/login" data-parsley-validate>
+            
+            <input type="text" name="usuario" placeholder="Nombre" class="parsley" data-parsley-required="true" data-parsley-ui-enabled='false' tabindex="1">
+
+            <input type="password" name="password" placeholder="Contraseña" class="parsley" data-parsley-required="true" data-parsley-ui-enabled='false' tabindex="2">
+
+            <label class="label_checkbox">
+                <input type="checkbox" class="icheck" name="terminos" tabindex="3">{{trans('login.checkbox')}}
+            </label>
+            
+            <input type="submit" value="Acceder" class="button_landing" tabindex="4">
+
+            <ul class="a_min">
+                <li><a href="#">{{trans('login.olvidado')}}</a></li>
+                <li><a href="{{Request::root()}}/registrar">{{trans('login.no_tengo')}}</a></li>
+            </ul>
+
+            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+
+        </form>
+
+        </div>
+
+    </div><!--/center_element-->
+
+</div>
+
+</div><!--/container-->
+
+</div><!--/main_login-->
+
+
+</body>
+<script type="text/javascript">
+/*$.listen('parsley:field:error', function (fieldInstance) {
+    alert("a");
+    arrErrorMsg = ParsleyUI.getErrorsMessages(fieldInstance);
+    errorMsg = arrErrorMsg.join(';');
+
+    fieldInstance.$element
+        .popover('destroy')
+        .popover({
+            container: 'body',
+            placement: 'right',
+            content: errorMsg
+        })
+        .popover('show');
+
+});
+
+$.listen('parsley:field:success', function (fieldInstance) {
+    alert("v");
+    fieldInstance.$element.popover('destroy');
+});*/
+
+/*$('#yourForm').parsley( {
+    alert("a");
+errors: {
+        classHandler: function ( elem ) {}                                // class is directly set on elem, parent for radio/checkboxes
+      , container: function ( elem, template, isRadioOrCheckbox ) {}      // error ul is inserted after elem, parent for radio/checkboxes
+      , errorsWrapper: '<ul></ul>'                                        // do not set an id for this elem, it would have an auto-generated id
+      , errorElem: '<li></li>'                                            // each field constraint fail in an li
+      }
+} );*/
+</script>
+</html>
