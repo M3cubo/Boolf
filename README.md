@@ -1,4 +1,4 @@
 # Boolf
-A library to read and download books of the public domain.
+A library to read and download books from the public domain.
 
 https://boolf.org/
